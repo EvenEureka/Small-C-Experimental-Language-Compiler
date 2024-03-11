@@ -1,0 +1,249 @@
+由于语法栈中内容较多，为了便于区分，[]为语法栈内容，()为表达式内容
+
+步骤	[语法栈]	(输入串)	表达式
+0	['#', 'Prog']	(int)	None
+1	['#', 'Dstr']	(int)	1 Dstr
+2	['#', 'Stem', 'Decl']	(int)	2 Decl Stem
+3	['#', 'Stem', 'Type', 'ID', 'int']	(int)	4 int ID Type
+4	['#', 'Stem', 'Type', 'ID']	(ID)	
+5	['#', 'Stem', 'Type']	(;)	
+6	['#', 'Stem', 'Vari', 'Advr']	(;)	6 Advr Vari
+7	['#', 'Stem', 'Vari']	(;)	0
+8	['#', 'Stem', ';']	(;)	8 ;
+9	['#', 'Stem']	(int)	
+10	['#', 'Dstr']	(int)	3 Dstr
+11	['#', 'Stem', 'Decl']	(int)	2 Decl Stem
+12	['#', 'Stem', 'Type', 'ID', 'int']	(int)	4 int ID Type
+13	['#', 'Stem', 'Type', 'ID']	(ID)	
+14	['#', 'Stem', 'Type']	(;)	
+15	['#', 'Stem', 'Vari', 'Advr']	(;)	6 Advr Vari
+16	['#', 'Stem', 'Vari']	(;)	0
+17	['#', 'Stem', ';']	(;)	8 ;
+18	['#', 'Stem']	(int)	
+19	['#', 'Dstr']	(int)	3 Dstr
+20	['#', 'Stem', 'Decl']	(int)	2 Decl Stem
+21	['#', 'Stem', 'Type', 'ID', 'int']	(int)	4 int ID Type
+22	['#', 'Stem', 'Type', 'ID']	(ID)	
+23	['#', 'Stem', 'Type']	(()	
+24	['#', 'Stem', 'Func']	(()	7 Func
+25	['#', 'Stem', 'Epro', 'Bloc', ')', 'Pnum', 'Vpam', '(', 'Mpro']	(()	9 Mpro ( Vpam Pnum ) Bloc Epro
+26	['#', 'Stem', 'Epro', 'Bloc', ')', 'Pnum', 'Vpam', '(']	(()	0
+27	['#', 'Stem', 'Epro', 'Bloc', ')', 'Pnum', 'Vpam']	(int)	
+28	['#', 'Stem', 'Epro', 'Bloc', ')', 'Pnum', 'Pist']	(int)	10 Pist
+29	['#', 'Stem', 'Epro', 'Bloc', ')', 'Pnum', 'Ptem', 'Parm']	(int)	12 Parm Ptem
+30	['#', 'Stem', 'Epro', 'Bloc', ')', 'Pnum', 'Ptem', 'Advr', 'ID', 'int']	(int)	14 int ID Advr
+31	['#', 'Stem', 'Epro', 'Bloc', ')', 'Pnum', 'Ptem', 'Advr', 'ID']	(ID)	
+32	['#', 'Stem', 'Epro', 'Bloc', ')', 'Pnum', 'Ptem', 'Advr']	())	
+33	['#', 'Stem', 'Epro', 'Bloc', ')', 'Pnum', 'Ptem']	())	0
+34	['#', 'Stem', 'Epro', 'Bloc', ')', 'Pnum']	())	0
+35	['#', 'Stem', 'Epro', 'Bloc', ')']	())	0
+36	['#', 'Stem', 'Epro', 'Bloc']	({)	
+37	['#', 'Stem', 'Epro', '}', 'Lstr', 'Kdec', '{']	({)	15 { Kdec Lstr }
+38	['#', 'Stem', 'Epro', '}', 'Lstr', 'Kdec']	(ID)	
+39	['#', 'Stem', 'Epro', '}', 'Lstr']	(ID)	0
+40	['#', 'Stem', 'Epro', '}', 'Ltem', 'Lang']	(ID)	18 Lang Ltem
+41	['#', 'Stem', 'Epro', '}', 'Ltem', 'Asla']	(ID)	23 Asla
+42	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Expr', '=', 'Push', 'ID', 'Push', 'Mexp']	(ID)	24 Mexp Push ID Push = Expr Upex Pcsk ;
+43	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Expr', '=', 'Push', 'ID', 'Push']	(ID)	0
+44	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Expr', '=', 'Push', 'ID']	(ID)	0
+45	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Expr', '=', 'Push']	(=)	
+46	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Expr', '=']	(=)	0
+47	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Expr']	(ID)	
+48	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Aexp']	(ID)	30 Aexp Atem
+49	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Itmp', 'Item']	(ID)	37 Item Itmp
+50	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Itmp', 'Ftem', 'Fact']	(ID)	40 Fact Ftem
+51	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Itmp', 'Ftem', 'FTYP', 'ID', 'Push']	(ID)	45 Push ID FTYP
+52	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Itmp', 'Ftem', 'FTYP', 'ID']	(ID)	0
+53	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Itmp', 'Ftem', 'FTYP']	(+)	
+54	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Itmp', 'Ftem']	(+)	0
+55	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Itmp']	(+)	0
+56	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Upex', 'Aexp', '+', 'Push']	(+)	38 Push + Aexp Upex
+57	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Upex', 'Aexp', '+']	(+)	0
+58	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Upex', 'Aexp']	(NUM)	
+59	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Upex', 'Itmp', 'Item']	(NUM)	37 Item Itmp
+60	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Upex', 'Itmp', 'Ftem', 'Fact']	(NUM)	40 Fact Ftem
+61	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Upex', 'Itmp', 'Ftem', 'NUM', 'Push']	(NUM)	43 Push NUM
+62	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Upex', 'Itmp', 'Ftem', 'NUM']	(NUM)	0
+63	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Upex', 'Itmp', 'Ftem']	(;)	
+64	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Upex', 'Itmp']	(;)	0
+65	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Upex']	(;)	0
+66	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem']	(;)	0
+67	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex']	(;)	0
+68	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk']	(;)	0
+69	['#', 'Stem', 'Epro', '}', 'Ltem', ';']	(;)	0
+70	['#', 'Stem', 'Epro', '}', 'Ltem']	(return)	
+71	['#', 'Stem', 'Epro', '}', 'Lstr']	(return)	19 Lstr
+72	['#', 'Stem', 'Epro', '}', 'Ltem', 'Lang']	(return)	18 Lang Ltem
+73	['#', 'Stem', 'Epro', '}', 'Ltem', 'Rela']	(return)	22 Rela
+74	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Endr', 'Rtem', 'return']	(return)	25 return Rtem Endr ;
+75	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Endr', 'Rtem']	(ID)	
+76	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Endr', 'Expr']	(ID)	26 Expr
+77	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Endr', 'Atem', 'Aexp']	(ID)	30 Aexp Atem
+78	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Endr', 'Atem', 'Itmp', 'Item']	(ID)	37 Item Itmp
+79	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Endr', 'Atem', 'Itmp', 'Ftem', 'Fact']	(ID)	40 Fact Ftem
+80	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Endr', 'Atem', 'Itmp', 'Ftem', 'FTYP', 'ID', 'Push']	(ID)	45 Push ID FTYP
+81	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Endr', 'Atem', 'Itmp', 'Ftem', 'FTYP', 'ID']	(ID)	0
+82	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Endr', 'Atem', 'Itmp', 'Ftem', 'FTYP']	(*)	
+83	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Endr', 'Atem', 'Itmp', 'Ftem']	(*)	0
+84	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Endr', 'Atem', 'Itmp', 'Upex', 'Item', '*', 'Push']	(*)	41 Push * Item Upex
+85	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Endr', 'Atem', 'Itmp', 'Upex', 'Item', '*']	(*)	0
+86	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Endr', 'Atem', 'Itmp', 'Upex', 'Item']	(NUM)	
+87	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Endr', 'Atem', 'Itmp', 'Upex', 'Ftem', 'Fact']	(NUM)	40 Fact Ftem
+88	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Endr', 'Atem', 'Itmp', 'Upex', 'Ftem', 'NUM', 'Push']	(NUM)	43 Push NUM
+89	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Endr', 'Atem', 'Itmp', 'Upex', 'Ftem', 'NUM']	(NUM)	0
+90	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Endr', 'Atem', 'Itmp', 'Upex', 'Ftem']	(;)	
+91	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Endr', 'Atem', 'Itmp', 'Upex']	(;)	0
+92	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Endr', 'Atem', 'Itmp']	(;)	0
+93	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Endr', 'Atem']	(;)	0
+94	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Endr']	(;)	0
+95	['#', 'Stem', 'Epro', '}', 'Ltem', ';']	(;)	0
+96	['#', 'Stem', 'Epro', '}', 'Ltem']	(})	
+97	['#', 'Stem', 'Epro', '}']	(})	0
+98	['#', 'Stem', 'Epro']	(void)	
+99	['#', 'Stem']	(void)	0
+100	['#', 'Dstr']	(void)	3 Dstr
+101	['#', 'Stem', 'Decl']	(void)	2 Decl Stem
+102	['#', 'Stem', 'Func', 'ID', 'void']	(void)	5 void ID Func
+103	['#', 'Stem', 'Func', 'ID']	(ID)	
+104	['#', 'Stem', 'Func']	(()	
+105	['#', 'Stem', 'Epro', 'Bloc', ')', 'Pnum', 'Vpam', '(', 'Mpro']	(()	9 Mpro ( Vpam Pnum ) Bloc Epro
+106	['#', 'Stem', 'Epro', 'Bloc', ')', 'Pnum', 'Vpam', '(']	(()	0
+107	['#', 'Stem', 'Epro', 'Bloc', ')', 'Pnum', 'Vpam']	(void)	
+108	['#', 'Stem', 'Epro', 'Bloc', ')', 'Pnum', 'void']	(void)	11 void
+109	['#', 'Stem', 'Epro', 'Bloc', ')', 'Pnum']	())	
+110	['#', 'Stem', 'Epro', 'Bloc', ')']	())	0
+111	['#', 'Stem', 'Epro', 'Bloc']	({)	
+112	['#', 'Stem', 'Epro', '}', 'Lstr', 'Kdec', '{']	({)	15 { Kdec Lstr }
+113	['#', 'Stem', 'Epro', '}', 'Lstr', 'Kdec']	(int)	
+114	['#', 'Stem', 'Epro', '}', 'Lstr', 'Kdec', ';', 'Advr', 'Kvde']	(int)	16 Kvde Advr ; Kdec
+115	['#', 'Stem', 'Epro', '}', 'Lstr', 'Kdec', ';', 'Advr', 'ID', 'int']	(int)	17 int ID
+116	['#', 'Stem', 'Epro', '}', 'Lstr', 'Kdec', ';', 'Advr', 'ID']	(ID)	
+117	['#', 'Stem', 'Epro', '}', 'Lstr', 'Kdec', ';', 'Advr']	(;)	
+118	['#', 'Stem', 'Epro', '}', 'Lstr', 'Kdec', ';']	(;)	0
+119	['#', 'Stem', 'Epro', '}', 'Lstr', 'Kdec']	(int)	
+120	['#', 'Stem', 'Epro', '}', 'Lstr', 'Kdec', ';', 'Advr', 'Kvde']	(int)	16 Kvde Advr ; Kdec
+121	['#', 'Stem', 'Epro', '}', 'Lstr', 'Kdec', ';', 'Advr', 'ID', 'int']	(int)	17 int ID
+122	['#', 'Stem', 'Epro', '}', 'Lstr', 'Kdec', ';', 'Advr', 'ID']	(ID)	
+123	['#', 'Stem', 'Epro', '}', 'Lstr', 'Kdec', ';', 'Advr']	(;)	
+124	['#', 'Stem', 'Epro', '}', 'Lstr', 'Kdec', ';']	(;)	0
+125	['#', 'Stem', 'Epro', '}', 'Lstr', 'Kdec']	(int)	
+126	['#', 'Stem', 'Epro', '}', 'Lstr', 'Kdec', ';', 'Advr', 'Kvde']	(int)	16 Kvde Advr ; Kdec
+127	['#', 'Stem', 'Epro', '}', 'Lstr', 'Kdec', ';', 'Advr', 'ID', 'int']	(int)	17 int ID
+128	['#', 'Stem', 'Epro', '}', 'Lstr', 'Kdec', ';', 'Advr', 'ID']	(ID)	
+129	['#', 'Stem', 'Epro', '}', 'Lstr', 'Kdec', ';', 'Advr']	(;)	
+130	['#', 'Stem', 'Epro', '}', 'Lstr', 'Kdec', ';']	(;)	0
+131	['#', 'Stem', 'Epro', '}', 'Lstr', 'Kdec']	(ID)	
+132	['#', 'Stem', 'Epro', '}', 'Lstr']	(ID)	0
+133	['#', 'Stem', 'Epro', '}', 'Ltem', 'Lang']	(ID)	18 Lang Ltem
+134	['#', 'Stem', 'Epro', '}', 'Ltem', 'Asla']	(ID)	23 Asla
+135	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Expr', '=', 'Push', 'ID', 'Push', 'Mexp']	(ID)	24 Mexp Push ID Push = Expr Upex Pcsk ;
+136	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Expr', '=', 'Push', 'ID', 'Push']	(ID)	0
+137	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Expr', '=', 'Push', 'ID']	(ID)	0
+138	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Expr', '=', 'Push']	(=)	
+139	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Expr', '=']	(=)	0
+140	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Expr']	(NUM)	
+141	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Aexp']	(NUM)	30 Aexp Atem
+142	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Itmp', 'Item']	(NUM)	37 Item Itmp
+143	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Itmp', 'Ftem', 'Fact']	(NUM)	40 Fact Ftem
+144	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Itmp', 'Ftem', 'NUM', 'Push']	(NUM)	43 Push NUM
+145	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Itmp', 'Ftem', 'NUM']	(NUM)	0
+146	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Itmp', 'Ftem']	(;)	
+147	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Itmp']	(;)	0
+148	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem']	(;)	0
+149	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex']	(;)	0
+150	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk']	(;)	0
+151	['#', 'Stem', 'Epro', '}', 'Ltem', ';']	(;)	0
+152	['#', 'Stem', 'Epro', '}', 'Ltem']	(ID)	
+153	['#', 'Stem', 'Epro', '}', 'Lstr']	(ID)	19 Lstr
+154	['#', 'Stem', 'Epro', '}', 'Ltem', 'Lang']	(ID)	18 Lang Ltem
+155	['#', 'Stem', 'Epro', '}', 'Ltem', 'Asla']	(ID)	23 Asla
+156	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Expr', '=', 'Push', 'ID', 'Push', 'Mexp']	(ID)	24 Mexp Push ID Push = Expr Upex Pcsk ;
+157	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Expr', '=', 'Push', 'ID', 'Push']	(ID)	0
+158	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Expr', '=', 'Push', 'ID']	(ID)	0
+159	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Expr', '=', 'Push']	(=)	
+160	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Expr', '=']	(=)	0
+161	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Expr']	(NUM)	
+162	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Aexp']	(NUM)	30 Aexp Atem
+163	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Itmp', 'Item']	(NUM)	37 Item Itmp
+164	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Itmp', 'Ftem', 'Fact']	(NUM)	40 Fact Ftem
+165	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Itmp', 'Ftem', 'NUM', 'Push']	(NUM)	43 Push NUM
+166	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Itmp', 'Ftem', 'NUM']	(NUM)	0
+167	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Itmp', 'Ftem']	(;)	
+168	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Itmp']	(;)	0
+169	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem']	(;)	0
+170	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex']	(;)	0
+171	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk']	(;)	0
+172	['#', 'Stem', 'Epro', '}', 'Ltem', ';']	(;)	0
+173	['#', 'Stem', 'Epro', '}', 'Ltem']	(ID)	
+174	['#', 'Stem', 'Epro', '}', 'Lstr']	(ID)	19 Lstr
+175	['#', 'Stem', 'Epro', '}', 'Ltem', 'Lang']	(ID)	18 Lang Ltem
+176	['#', 'Stem', 'Epro', '}', 'Ltem', 'Asla']	(ID)	23 Asla
+177	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Expr', '=', 'Push', 'ID', 'Push', 'Mexp']	(ID)	24 Mexp Push ID Push = Expr Upex Pcsk ;
+178	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Expr', '=', 'Push', 'ID', 'Push']	(ID)	0
+179	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Expr', '=', 'Push', 'ID']	(ID)	0
+180	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Expr', '=', 'Push']	(=)	
+181	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Expr', '=']	(=)	0
+182	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Expr']	(NUM)	
+183	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Aexp']	(NUM)	30 Aexp Atem
+184	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Itmp', 'Item']	(NUM)	37 Item Itmp
+185	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Itmp', 'Ftem', 'Fact']	(NUM)	40 Fact Ftem
+186	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Itmp', 'Ftem', 'NUM', 'Push']	(NUM)	43 Push NUM
+187	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Itmp', 'Ftem', 'NUM']	(NUM)	0
+188	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Itmp', 'Ftem']	(;)	
+189	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Itmp']	(;)	0
+190	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem']	(;)	0
+191	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex']	(;)	0
+192	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk']	(;)	0
+193	['#', 'Stem', 'Epro', '}', 'Ltem', ';']	(;)	0
+194	['#', 'Stem', 'Epro', '}', 'Ltem']	(ID)	
+195	['#', 'Stem', 'Epro', '}', 'Lstr']	(ID)	19 Lstr
+196	['#', 'Stem', 'Epro', '}', 'Ltem', 'Lang']	(ID)	18 Lang Ltem
+197	['#', 'Stem', 'Epro', '}', 'Ltem', 'Asla']	(ID)	23 Asla
+198	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Expr', '=', 'Push', 'ID', 'Push', 'Mexp']	(ID)	24 Mexp Push ID Push = Expr Upex Pcsk ;
+199	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Expr', '=', 'Push', 'ID', 'Push']	(ID)	0
+200	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Expr', '=', 'Push', 'ID']	(ID)	0
+201	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Expr', '=', 'Push']	(=)	
+202	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Expr', '=']	(=)	0
+203	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Expr']	(ID)	
+204	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Aexp']	(ID)	30 Aexp Atem
+205	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Itmp', 'Item']	(ID)	37 Item Itmp
+206	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Itmp', 'Ftem', 'Fact']	(ID)	40 Fact Ftem
+207	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Itmp', 'Ftem', 'FTYP', 'ID', 'Push']	(ID)	45 Push ID FTYP
+208	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Itmp', 'Ftem', 'FTYP', 'ID']	(ID)	0
+209	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Itmp', 'Ftem', 'FTYP']	(()	
+210	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Itmp', 'Ftem', 'Call']	(()	46 Call
+211	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Itmp', 'Ftem', ')', 'Upsk', 'Rist', '(', 'Mpsk']	(()	47 Mpsk ( Rist Upsk )
+212	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Itmp', 'Ftem', ')', 'Upsk', 'Rist', '(']	(()	0
+213	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Itmp', 'Ftem', ')', 'Upsk', 'Rist']	(ID)	
+214	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Itmp', 'Ftem', ')', 'Upsk', 'Rltm', 'Expr']	(ID)	49 Expr Rltm
+215	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Itmp', 'Ftem', ')', 'Upsk', 'Rltm', 'Atem', 'Aexp']	(ID)	30 Aexp Atem
+216	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Itmp', 'Ftem', ')', 'Upsk', 'Rltm', 'Atem', 'Itmp', 'Item']	(ID)	37 Item Itmp
+217	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Itmp', 'Ftem', ')', 'Upsk', 'Rltm', 'Atem', 'Itmp', 'Ftem', 'Fact']	(ID)	40 Fact Ftem
+218	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Itmp', 'Ftem', ')', 'Upsk', 'Rltm', 'Atem', 'Itmp', 'Ftem', 'FTYP', 'ID', 'Push']	(ID)	45 Push ID FTYP
+219	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Itmp', 'Ftem', ')', 'Upsk', 'Rltm', 'Atem', 'Itmp', 'Ftem', 'FTYP', 'ID']	(ID)	0
+220	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Itmp', 'Ftem', ')', 'Upsk', 'Rltm', 'Atem', 'Itmp', 'Ftem', 'FTYP']	())	
+221	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Itmp', 'Ftem', ')', 'Upsk', 'Rltm', 'Atem', 'Itmp', 'Ftem']	())	0
+222	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Itmp', 'Ftem', ')', 'Upsk', 'Rltm', 'Atem', 'Itmp']	())	0
+223	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Itmp', 'Ftem', ')', 'Upsk', 'Rltm', 'Atem']	())	0
+224	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Itmp', 'Ftem', ')', 'Upsk', 'Rltm']	())	0
+225	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Itmp', 'Ftem', ')', 'Upsk']	())	0
+226	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Itmp', 'Ftem', ')']	())	0
+227	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Itmp', 'Ftem']	(;)	
+228	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem', 'Itmp']	(;)	0
+229	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex', 'Atem']	(;)	0
+230	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk', 'Upex']	(;)	0
+231	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Pcsk']	(;)	0
+232	['#', 'Stem', 'Epro', '}', 'Ltem', ';']	(;)	0
+233	['#', 'Stem', 'Epro', '}', 'Ltem']	(return)	
+234	['#', 'Stem', 'Epro', '}', 'Lstr']	(return)	19 Lstr
+235	['#', 'Stem', 'Epro', '}', 'Ltem', 'Lang']	(return)	18 Lang Ltem
+236	['#', 'Stem', 'Epro', '}', 'Ltem', 'Rela']	(return)	22 Rela
+237	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Endr', 'Rtem', 'return']	(return)	25 return Rtem Endr ;
+238	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Endr', 'Rtem']	(;)	
+239	['#', 'Stem', 'Epro', '}', 'Ltem', ';', 'Endr']	(;)	0
+240	['#', 'Stem', 'Epro', '}', 'Ltem', ';']	(;)	0
+241	['#', 'Stem', 'Epro', '}', 'Ltem']	(})	
+242	['#', 'Stem', 'Epro', '}']	(})	0
+243	['#', 'Stem', 'Epro']	(#)	
+244	['#', 'Stem']	(#)	0
+245	['#']	(#)	0
